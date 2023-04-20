@@ -5,6 +5,7 @@ int main()
 {
 	int numBox[5] = {3,4,6,8,9};
 	int result;
+	int count = 0;
 	int i = 0;
 	int j = 0;
 	for(i = 0; i < 5; i++)
@@ -24,9 +25,11 @@ int main()
 				}
 				else
 				{
-					printf("%d\n",result);
+					printf("%d,",result);
+					count++;
 				}
 			}
 		}
 	}
+	printf("\nTotal:%d",count);
 } 
