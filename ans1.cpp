@@ -18,7 +18,14 @@ int main()
 			else
 			{
 				result = numBox[i] * 10 + numBox[j];
-				printf("%d\n",result);
+				if(result >= 90)
+				{
+					continue;
+				}
+				else
+				{
+					printf("%d\n",result);
+				}
 			}
 		}
 	}
