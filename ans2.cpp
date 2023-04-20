@@ -6,6 +6,7 @@ int main()
 	char str[100];
 	char str1[100];
 	int err = 0;
+	err = 0;
 	printf("String:");
 	scanf("%s", str);
 	int i = 0;
@@ -21,7 +22,11 @@ int main()
 		}
 		else
 		{
-			err = 1;
+			if(str[i] != '\n')
+			{
+				err = 1;
+			}
+			printf("%d is err", i);
 			break;
 		}
 	}
@@ -29,9 +34,10 @@ int main()
 	{
 		printf("%s", str1);
 	}
-	else
+	if(err == 1)
 	{
 		printf("Error!");
+		printf("%d",err);
 		printf(str1);
 	}
 }
