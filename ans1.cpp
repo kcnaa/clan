@@ -4,6 +4,7 @@
 int main()
 {
 	int numBox[5] = {3,4,6,8,9};
+	int firstPrint = 1;
 	int result;
 	int count = 0;
 	int i = 0;
@@ -25,7 +26,15 @@ int main()
 				}
 				else
 				{
-					printf("%d,",result);
+					if(firstPrint == 1)
+					{
+						printf("%d",result);
+						firstPrint = 0;
+					}
+					else
+					{
+						printf(",%d",result);
+					}
 					count++;
 				}
 			}
