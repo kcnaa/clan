@@ -26,7 +26,7 @@ void printList(int list[], int len)
 		printf("%d", list[i]);
 		if(i != len - 1)
 		{
-			printf(", ");
+			printf(",");
 		}
 	}
 }
@@ -35,11 +35,17 @@ int main()
 {
 	int data[5] = {3, 5, 2, 999, 999};
 	
-	printf("Original data : ");
 	printList(data, 5);
 	printf("\n");
-	
 	insertionSort(data, 5);
-	printf("Sorted data : ");
+	printList(data, 5);
+	
+	printf("\n\n");
+	
+	int inputNum;
+	printf("Input a number: ");
+	scanf("%d", &inputNum);
+	data[4] = inputNum;
+	insertionSort(data, 5);
 	printList(data, 5);
 }
